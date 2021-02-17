@@ -1,0 +1,26 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  padding-top: 4.5rem;
+
+  &__logo {
+    flex: 1;
+  }
+
+  &__wrapper {
+    flex: 1;
+  }
+
+  &__links {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  &__btn {
+    padding: 1.2rem 3rem;
+  }
+}
