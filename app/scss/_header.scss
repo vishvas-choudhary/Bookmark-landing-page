@@ -1,12 +1,25 @@
 .header {
+  margin-bottom: 11.5rem;
+
+  @include breakpoint-down(small) {
+    margin-bottom: 7rem;
+  }
+}
+
+.nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-transform: uppercase;
-  padding-top: 4.5rem;
+  margin-top: 4.5rem;
+
+  @include breakpoint-down(medium) {
+    margin-top: 3rem;
+  }
 
   &__logo {
     flex: 1;
+    z-index: 5;
   }
 
   &__wrapper {
@@ -17,10 +30,95 @@
     font-size: 1.5rem;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
   }
 
   &__btn {
     padding: 1.2rem 3rem;
   }
 }
+
+// .hamburger {
+//   cursor: pointer;
+//   z-index: 5;
+// }
+
+// .hamburger-links {
+//   position: absolute;
+//   top: 12%;
+//   left: 50%;
+//   transform: translateX(-50%);
+//   width: 80%;
+//   text-align: center;
+//   z-index: 5;
+//   visibility: hidden;
+//   opacity: 0;
+//   transition: all 0.3s ease-in-out;
+
+//   li {
+//     border-top: 1px solid $grayishBlue;
+//   }
+
+//   li:not(:last-child) {
+//     padding: 2.5rem 0;
+//   }
+
+//   a {
+//     color: #fff;
+//     text-transform: uppercase;
+//   }
+
+//   .button {
+//     width: 100%;
+//     margin-top: 2.5rem;
+//   }
+// }
+
+// .hamburger-social {
+//   position: absolute;
+//   text-align: center;
+//   bottom: 5%;
+//   left: 50%;
+//   transform: translateX(-50%);
+//   z-index: 5;
+//   visibility: hidden;
+//   opacity: 0;
+//   transition: all 0.3s ease-in-out;
+
+//   li {
+//     margin: 1.5rem;
+//     display: inline-block;
+//   }
+// }
+
+// .overlay {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100vw;
+//   height: 100vh;
+//   background-color: $veryDarkBlue;
+//   opacity: 0;
+//   z-index: 2;
+//   visibility: hidden;
+//   transition: all 0.3s ease-in-out;
+// }
+
+// .fade-in {
+//   animation: fade-in 1s ease-in-out forwards;
+// }
+
+// @keyframes fade-in {
+//   0% {
+//     visibility: hidden;
+//     opacity: 0;
+//   }
+//   1% {
+//     visibility: visible;
+//     opacity: 0;
+//   }
+//   100% {
+//     visibility: visible;
+//     opacity: 0.9;
+//   }
+// }
